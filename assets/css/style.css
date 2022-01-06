@@ -1,0 +1,64 @@
+/* Setup Variables */
+:root {
+  /* Color */
+  --color-black: #000;
+  --color-dark: #333;
+  --color-light: #fff;
+  --color-primary: #01627f;
+  --color-accent: #4e95b4;
+  --color-secondary: #f1962e;
+  --color-card-first: rgba(78, 149, 180, 0.2);
+  --color-card-second: rgba(199, 248, 255, 0.2);
+  --color-card-third: rgba(241, 150, 46, 0.2);
+
+  /* Fonts */
+  --body-font: "Poppins", sans-serif;
+  --header-font: "Yeseva One", cursive;
+  --button-font: "Roboto", sans-serif;
+  --logo-font: "Lobster", cursive;
+
+  /* Font Size */
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  font-family: var(--body-font);
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

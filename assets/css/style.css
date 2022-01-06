@@ -1,14 +1,14 @@
 /* Setup Variables */
 :root {
   /* Color */
-  --color-black: #000;
-  --color-dark: #333;
-  --color-light: #fff;
+  --color-black: #0b0d17;
+  --color-dark: #d9dbe1;
+  --color-light: #fdfdfd;
   --color-primary: #01627f;
   --color-accent: #4e95b4;
   --color-secondary: #f1962e;
   --color-card-first: rgba(78, 149, 180, 0.2);
-  --color-card-second: rgba(199, 248, 255, 0.2);
+  --color-card-second: rgba(199, 248, 255, 0.5);
   --color-card-third: rgba(241, 150, 46, 0.2);
 
   /* Fonts */
@@ -18,6 +18,11 @@
   --logo-font: "Lobster", cursive;
 
   /* Font Size */
+  --header-size: 2.2rem;
+  --subheader-size: 1.8rem;
+  --sub-title-size: 1.5rem;
+  --button-font-size: 1rem;
+  --body-font-size: 0.896rem;
 }
 
 /* CSS Reset */
@@ -31,11 +36,15 @@
 
 html {
   scroll-behavior: smooth;
+  background: #e5e5e5;
 }
 
 body {
   font-family: var(--body-font);
   font-weight: 400;
+  background: #fff;
+  margin: 3rem;
+  box-shadow: 0 0 0.4rem;
 }
 
 h1 {
@@ -53,6 +62,11 @@ img {
   width: 100%;
 }
 
+p {
+  font-size: var(--body-font-size);
+  margin-top: 1rem;
+}
+
 a,
 a:hover,
 a:visited {
@@ -61,4 +75,166 @@ a:visited {
 
 ul {
   list-style: none;
+}
+
+section {
+  margin: 0 6rem;
+  padding-top: 4rem;
+}
+
+footer {
+  padding: 1rem;
+  color: var(--color-dark);
+  background: var(--color-black);
+}
+
+/* Utility Classes */
+.gap {
+  margin: 3rem 0;
+}
+
+.logo {
+  font-family: var(--logo-font);
+  color: var(--color-light);
+}
+
+.logo > span {
+  color: var(--color-primary);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.col {
+  flex-basis: 1;
+  width: 100%;
+}
+
+.col-img {
+  display: flex;
+  justify-content: center;
+}
+
+.col-img-start {
+  display: flex;
+  justify-content: flex-start;
+  flex-shrink: 2;
+}
+.col-img-end {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 2;
+}
+
+.btn {
+  font-family: var(--button-font);
+  font-weight: 500;
+  border-radius: 0.45rem;
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.5rem;
+  color: var(--color-light);
+  background: var(--color-primary);
+  font-size: var(--button-font-size);
+}
+
+.hero-img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  flex-basis: 1;
+  padding: 2rem;
+  width: 15rem;
+  height: 28rem;
+  border-radius: 0.8rem;
+}
+
+.card:nth-child(1) {
+  background: var(--color-card-first);
+}
+
+.card:nth-child(2) {
+  background: var(--color-card-second);
+}
+
+.card:nth-child(3) {
+  background: var(--color-card-third);
+}
+
+.card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.card-img {
+  width: 8rem;
+  height: 5rem;
+}
+
+.goal-img {
+  width: 90%;
+}
+
+/* Text Utilites */
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.hero-text {
+  position: relative;
+  line-height: 3rem;
+  margin-left: 0.6rem;
+  color: var(--color-black);
+  font-size: var(--header-size);
+}
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.6rem;
+  height: 100%;
+  width: 0.18rem;
+  border-radius: 1rem;
+  background: var(--color-primary);
+}
+
+.hero-text > span {
+  display: block;
+  color: var(--color-secondary);
+}
+
+.title {
+  color: var(--color-accent);
+  font-size: var(--subheader-size);
+  margin-bottom: 1.5rem;
+}
+
+.title > span {
+  color: var(--color-secondary);
+}
+
+.sub-title {
+  color: var(--color-black);
+  font-size: var(--sub-title-size);
+  margin-bottom: 1.5rem;
+}
+
+.sub-title > span {
+  display: block;
 }
